@@ -8,7 +8,7 @@ In order to be broadly adopted, GraphQL will have to target a wide variety of ba
 
 Looking for help? Find resources [from the community](http://graphql.org/community/).
 
-## Getting Started
+## 入门
 
 GraphQL consists of a type system, query language and execution semantics, static validation, and type introspection, each outlined below. To guide you through each of these components, we've written an example designed to illustrate the various pieces of GraphQL.
 
@@ -16,7 +16,7 @@ This example is not comprehensive, but it is designed to quickly introduce the c
 
 The premise of the example is that we want to use GraphQL to query for information about characters and locations in the original Star Wars trilogy.
 
-### Type System
+### 类型系统
 
 At the heart of any GraphQL implementation is a description of what types of objects it can return, described in a GraphQL type system and returned in the GraphQL Schema.
 
