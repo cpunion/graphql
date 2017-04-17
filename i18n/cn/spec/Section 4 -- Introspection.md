@@ -61,7 +61,7 @@ Types and fields required by the GraphQL introspection system that are used in t
 
 ### Documentation
 
-All types in the introspection system provide a `description` field of type `String` to allow type designers to publish documentation in addition to capabilities. A GraphQL server may return the `description` field using Markdown syntax. Therefore it is recommended that any tool that displays description use a Markdown renderer.
+All types in the introspection system provide a `description` field of type `String` to allow type designers to publish documentation in addition to capabilities. A GraphQL server may return the `description` field using Markdown syntax (as specified by [CommonMark](http://commonmark.org/)). Therefore it is recommended that any tool that displays `description` use a CommonMark-compliant Markdown renderer.
 
 ### Deprecation
 
@@ -322,6 +322,17 @@ Fields
 * `description` may return a String or {null}
 * `type` must return a `__Type` that represents the type this input value expects.
 * `defaultValue` may return a String encoding (using the GraphQL language) of the default value used by this input value in the condition a value is not provided at runtime. If this input value has no default value, returns {null}.
+
+### The __EnumValue Type
+
+The `__EnumValue` type represents one of possible values of an enum.
+
+Fields
+
+* `name` must return a String
+* `description` may return a String or {null}
+* `isDeprecated` returns {true} if this field should no longer be used, otherwise {false}.
+* `deprecationReason` optionally provides a reason why this field is deprecated.
 
 ### The __Directive Type
 
